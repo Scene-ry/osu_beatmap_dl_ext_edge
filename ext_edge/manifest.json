@@ -14,6 +14,7 @@
                 "http://osu.ppy.sh/b/*",
                 "https://osu.ppy.sh/b/*"
             ],
+            "css": ["stylesheet.css"],
             "js": ["script.js"],
             "run_at": "document_idle"
         }

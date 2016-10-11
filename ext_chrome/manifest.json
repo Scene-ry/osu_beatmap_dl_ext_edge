@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "osu! mirror links",
-    "version": "1.0.0.0",
+    "version": "1.0",
     "description": "Get osu! beatmap download link from mirror websites.",
     "icons": {
         "32": "icon.ico"
@@ -14,6 +14,7 @@
                 "http://osu.ppy.sh/b/*",
                 "https://osu.ppy.sh/b/*"
             ],
+            "css": ["stylesheet.css"],
             "js": ["script.js"],
             "run_at": "document_idle"
         }

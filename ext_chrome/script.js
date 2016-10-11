@@ -14,7 +14,15 @@ var msky_url = "http://osu.mengsky.net/api/download/" + mapset_n;
 var bcat_url = "http://bloodcat.com/osu/s/" + mapset_n;
 var inso_url = "http://inso.link/yukiho/?m=" + mapset_n;
 
-var dl_btn = document.getElementsByClassName('beatmapDownloadButton')[0];
-var dl_list = document.createElement("ul");
-dl_list.innerHTML = "<li><a href=\"" + msky_url + "\">Mengsky</a></li><li><a href=\"" + bcat_url + "\">Bloodcat</a></li><li><a href=\"" + inso_url + "\" target=\"_blank\">Inso</a></li>";
-dl_btn.appendChild(dl_list);
+var dl_btn_parent = document.getElementsByClassName('beatmapDownloadButton')[0].parentNode;
+var dl_table = "<div class=\"beatmapDownloadButton scenery-ext-div\">"+
+                "  <table style=\"height: 139px;\">"+
+                "  	<tbody>"+
+                "      <tr><td><a class=\"button button-primary button-longshadow-right scenery-ext-a\" href=\"" + msky_url + "\">Mengsky</a></td></tr>"+
+                "      <tr><td><a class=\"button button-caution button-longshadow-right scenery-ext-a\" href=\"" + bcat_url + "\">Bloodcat</a></td></tr>"+
+                "      <tr><td><a class=\"button button-royal button-longshadow-right scenery-ext-a\" href=\"" + inso_url + "\" target=\"_blank\">Inso</a></td></tr>"+
+                "    </tbody>"+
+                "  </table>"+
+                "</div>";
+
+dl_btn_parent.innerHTML = dl_table + dl_btn_parent.innerHTML;
